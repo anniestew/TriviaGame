@@ -2,127 +2,108 @@
 <html lang="en-us">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Trivia Game</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
 <body>
     <div>
         <p id="wins"></p>
         <p id="losses"></p>
-        <p id ="unanswered"></p>
-    </div> 
-
-    <div id = startGame-container>
-			<h1 class = "header">Spice Girls Trivia!</h1>
-
-			<button id = startButton>Start</button>
-		</div>
-
-    
-        <div id = trivia-container>
-                <h1 class = "header">Spice Girls Trivia!</h1> <div class="card">
-                <form>
-                        <div id="countdown"></div>
-                        <div id ="trivia"></div>
-
-                        <h5>1. If you wanna be my lover, you gotta...</h5>
-                            <input type="radio" id="choice1"
-                            name="q1Answer" value="hang out with my friends">
-                            <label for="choice1">hang out with my friends</label>
-                
-                            <input type="radio" id="choice2"
-                            name="q1Answer" value="get with my friends">
-                            <label for="choice2">get with my friends</label>
-
-                            <input type="radio" id="choice3"
-                            name="q1Answer" value="stay away from my friends">
-                            <label for="choice3">stay away from my friends</label>
-
-                        <h5>2. Which Spice Girl left the group?</h5>   
-                            <input type="radio" id="choice1"
-                            name="q2Answer" value="Scary Spice">
-                            <label for="choice1">Scary Spice</label>
-                
-                            <input type="radio" id="choice2"
-                            name="q2Answer" value="Ginger Spice">
-                            <label for="choice2">Ginger Spice</label>
-
-                            <input type="radio" id="choice3"
-                            name="q2Answer" value="Baby Spice">
-                            <label for="choice3">Baby Spice</label>
-
-                        <h5>3. Which Spice Girl claimed she lip synced because she wasn't a good singer?</h5>   
-                            <input type="radio" id="choice1"
-                            name="q3Answer" value="Posh Spice">
-                            <label for="choice1">Posh Spice</label>
-                
-                            <input type="radio" id="choice2"
-                            name="q3Answer" value="Sporty Spice">
-                            <label for="choice2">Sporty Spice</label>
-
-                            <input type="radio" id="choice3"
-                            name="q3Answer" value="Scary Spice">
-                            <label for="choice3">Scary Spice</label>
-
-                        <h5>4. What is Baby Spice's real name?</h5>   
-                            <input type="radio" id="choice1"
-                            name="q4Answer" value="Geri Halliwell">
-                            <label for="choice1">Geri Halliwell</label>
-                
-                            <input type="radio" id="choice2"
-                            name="q4Answer" value="Victoria Beckam">
-                            <label for="choice2">Victoria Beckam</label>
-
-                            <input type="radio" id="choice3"
-                            name="q4Answer" value="Emma Bunton">
-                            <label for="choice3">Emma Bunton</label>
-
-                        <h5>5. Which Spice Girl went on to be a successful fashion designer?</h5>   
-                            <input type="radio" id="choice1"
-                            name="q5Answer" value="Sporty Spice">
-                            <label for="choice1">Sporty Spice</label>
-                
-                            <input type="radio" id="choice2"
-                            name="q5Answer" value="Posh Spice">
-                            <label for="choice2">Posh Spice</label>
-
-                            <input type="radio" id="choice3"
-                            name="q5Answer" value="Ginger Spice">
-                            <label for="choice3">Ginger Spice</label>
-
-                        <h5>6. What year did the Spice Girls break up?</h5>
-                            <input type="radio" id="choice1"
-                            name="q6Answer" value="1999">
-                            <label for="choice1">1999</label>
-                
-                            <input type="radio" id="choice2"
-                            name="q6Answer" value="2002">
-                            <label for="choice2">2002</label>
-
-                            <input type="radio" id="choice3"
-                            name="q6Answer" value="2000">
-                            <label for="choice3">2000</label>
-                        </div>
-
-                            <br>
-                        <button id = finishedButton>Finished!</button>
-                </form>
-        </div>
+        <p id="unanswered"></p>
     </div>
-    <div id = finish-container>
-			<h1 class = "header">Spice Girls Trivia!</h1>
 
-			<h3 id = "finished">Finished!</h3>
-			<br>
+    <div id="startGame-container">
+        <h1 class="header">Spice Girls Trivia!</h1>
 
-			<h8>Wins: <span id = "wins">0</span></h8>
-			<h8>Losses: <span id = losses>0</span></h8>
-			<h8>Unanswered: <span id = "unanswered">0</span></h8>
-		</div>
+        <button type="button" id="start-button">Start</button>
+    </div>
 
 
+    <div id="trivia-container">
+        <h1 class="header">Spice Girls Trivia!</h1>
+        <div class="card">
+            <form>
+                <div id="countdown"></div>
+                <div id="trivia"></div>
+
+                <h5>1. If you wanna be my lover, you gotta...</h5>
+                <input type="radio" id="choice1" name="q1Answer" value="hang out with my friends">
+                <label for="choice1">hang out with my friends</label>
+
+                <input type="radio" id="choice2" name="q1Answer" value="get with my friends">
+                <label for="choice2">get with my friends</label>
+
+                <input type="radio" id="choice3" name="q1Answer" value="stay away from my friends">
+                <label for="choice3">stay away from my friends</label>
+
+                <h5>2. Which Spice Girl left the group?</h5>
+                <input type="radio" id="choice1" name="q2Answer" value="Scary Spice">
+                <label for="choice1">Scary Spice</label>
+
+                <input type="radio" id="choice2" name="q2Answer" value="Ginger Spice">
+                <label for="choice2">Ginger Spice</label>
+
+                <input type="radio" id="choice3" name="q2Answer" value="Baby Spice">
+                <label for="choice3">Baby Spice</label>
+
+                <h5>3. Which Spice Girl claimed she lip synced because she wasn't a good singer?</h5>
+                <input type="radio" id="choice1" name="q3Answer" value="Posh Spice">
+                <label for="choice1">Posh Spice</label>
+
+                <input type="radio" id="choice2" name="q3Answer" value="Sporty Spice">
+                <label for="choice2">Sporty Spice</label>
+
+                <input type="radio" id="choice3" name="q3Answer" value="Scary Spice">
+                <label for="choice3">Scary Spice</label>
+
+                <h5>4. What is Baby Spice's real name?</h5>
+                <input type="radio" id="choice1" name="q4Answer" value="Geri Halliwell">
+                <label for="choice1">Geri Halliwell</label>
+
+                <input type="radio" id="choice2" name="q4Answer" value="Victoria Beckam">
+                <label for="choice2">Victoria Beckam</label>
+
+                <input type="radio" id="choice3" name="q4Answer" value="Emma Bunton">
+                <label for="choice3">Emma Bunton</label>
+
+                <h5>5. Which Spice Girl went on to be a successful fashion designer?</h5>
+                <input type="radio" id="choice1" name="q5Answer" value="Sporty Spice">
+                <label for="choice1">Sporty Spice</label>
+
+                <input type="radio" id="choice2" name="q5Answer" value="Posh Spice">
+                <label for="choice2">Posh Spice</label>
+
+                <input type="radio" id="choice3" name="q5Answer" value="Ginger Spice">
+                <label for="choice3">Ginger Spice</label>
+
+                <h5>6. What year did the Spice Girls break up?</h5>
+                <input type="radio" id="choice1" name="q6Answer" value="1999">
+                <label for="choice1">1999</label>
+
+                <input type="radio" id="choice2" name="q6Answer" value="2002">
+                <label for="choice2">2002</label>
+
+                <input type="radio" id="choice3" name="q6Answer" value="2000">
+                <label for="choice3">2000</label>
+        </div>
+
+        <br>
+        <button type="button" id="finished-button">Finished!</button>
+        </form>
+    </div>
+
+    <div id="finish-container">
+        <h1 class="header">Spice Girls Trivia!</h1>
+
+        <h3 id="finished">Finished!</h3>
+        <br>
+
+        <h8>Correct: <span id="correct">0</span></h8>
+        <h8>Incorrect: <span id="incorrect">0</span></h8>
+        <h8>Unanswered: <span id="unanswered">0</span></h8>
+    </div>
 
 
 
@@ -130,10 +111,14 @@
 
 
 
- <!-- jQuery -->
- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
- <!-- Script -->
- <script type="text/javascript" src="./assets/javascript/app.js"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Script -->
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
+
 </html>
