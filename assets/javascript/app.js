@@ -62,8 +62,8 @@ $(document).ready(function () {
 // // var questionIndex = 0;
 // var game = {
 
-//   wins: 0,
-//   losses: 0,
+//   correct: 0,
+//   incorrect: 0,
 //   unanswered: 0,
 //   questions: {
 //     q1: "Which Spice Girl left the group?",
