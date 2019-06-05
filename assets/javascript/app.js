@@ -1,70 +1,100 @@
 //TRIVIA GAME
-$(document).ready(function () {
+$("#trivia-container").hide();
+$("#finish-container").hide();
 
-  $("#trivia-container").hide();
-  $("#finish-container").hide();
+var correct = 0;
+var incorrect = 0;
+// // var unanswered = 0;
 
-  let countdown = function() {
-    var timeLeft = 100;
-    var timer = setInterval(function () {
-      document.getElementById("countdown").innerHTML = timeLeft + " seconds remaining";
-      timeLeft -= 1;
-      if (timeLeft <= 0) {
-        clearInterval(timer);
-        document.getElementById("countdown").innerHTML = "Time's Up!"
-      }
-    }, 1000);
+var correctText = document.getElementById("correct-text");
+var incorrectText = document.getElementById("incorrect-text");
+// var unansweredText = document.getElementById("unanswered-answers-text");
 
-
-    $("trivia-container").hide();
-    $("#finish-container").hide();
-  }
-
-    $(document).on("click", "#start-button", function () {
-      console.log("start clicked");
-
-      // Hide the start Div from the user
-      $("#startGame-container").hide();
-
-
-      // Show the Game Div
-      $("#trivia-container").show();
+  
+    let countdown = function() {
+      var timeLeft = 100;
+      var timer = setInterval(function () {
+        document.getElementById("countdown").innerHTML = timeLeft + " seconds remaining";
+        timeLeft -= 1;
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          document.getElementById("countdown").innerHTML = "Time's Up!"
+        }
+      }, 1000);
+  
+  
+      $("trivia-container").hide();
+      $("#finish-container").hide();
+    }
+  
+      $(document).on("click", "#start-button", function () {
+        console.log("start clicked");
+  
+        // Hide the start Div from the user
+        $("#startGame-container").hide();
+  
+  
+        // Show the Game Div
+        $("#trivia-container").show();
+        
+        countdown();
+  
+  
+      });
       
-      countdown();
+  
+      $(document).on("click", "#finished-button", function () {
+        console.log("finish clicked");
+  
+        // Hide the start Div from the user
+        $("#trivia-container").hide();
+  
+  
+        // Show the Game Div
+        $("#finish-container").show();
 
 
-    });
+        if ($('#correct1').is(':checked')) {
+            correct++
+        } else{
+            incorrect++
+        }
+        if ($('#correct2').is(":checked")) {
+            correct++
+        } else{
+            incorrect++
+        }
 
-    //function for collecting answers in array
-    //make loop for each question element and grab the checked answer
-    //grab answer compare answer with the array of correct answers
-    // if/else statement- if you have a match ++ correct
-    //else ++ incorrect - 
-    //unanswered - take amount of correct answers(array.length) 
-    //and subtract the sum of correct and incorrect answers = unanswered 
+        if ($('correct3').is(":checked")) {
+            correct++
+        } else{
+            incorrect++
+        }
 
-    $(document).on("click", "#finished-button", function () {
-      console.log("finish clicked");
+        if ($('#correct4').is(":checked")) {
+            correct++
+        } else{
+            incorrect++
+        }
 
-      // Hide the start Div from the user
-      $("#trivia-container").hide();
+        if ($('#correct5').is(":checked")) {
+            correct++
+        } else{
+            incorrect++
+        }
+        if ($('#correct6').is(":checked")) {
+            correct++
+        } else{
+            incorrect++
+        }
+        answer();
+  
+  
+      });
 
-
-      // Show the Game Div
-      $("#finish-container").show();
-
-
-    });
-})
-
-
-// // Variable to hold the index of current question.
-// // var questionIndex = 0;
-// var game = {
-
-//   correct: 0,
-//   incorrect: 0,
-//   unanswered: 0,
-//   questions: {
-//     q1: "Which Spice Girl left the group?",
-
+  function answer() {
+    $("#correct").show();
+    $("#incorrect").show();
+    correctText.textContent = "Correct Answers: " + correct;
+    incorrectText.textContent = "Incorrect Answers " + incorrect;
+}

@@ -11,11 +11,11 @@
 </head>
 
 <body>
-    <div>
+    <!-- <div>
         <p id="correct"></p>
         <p id="incorrect"></p>
         <p id="unanswered"></p>
-    </div>
+    </div> -->
 
     <div id="startGame-container">
         <h1 class="header">Spice Girls Trivia!</h1>
@@ -31,64 +31,64 @@
                 <div id="countdown"></div>
                 <div id="trivia"></div>
 
-                <h5>1. If you wanna be my lover, you gotta...</h5>
-                <input type="radio" id="choice1" name="q1Answer" value="hang out with my friends">
+                <div class = "question"><h5>1. If you wanna be my lover, you gotta...</h5></div>
+                <input type="radio" id="choice1" name="q1Answer" class="possible-answer" value="incorrect">
                 <label for="choice1">hang out with my friends</label>
 
-                <input type="radio" id="choice2" name="q1Answer" value="get with my friends">
+                <input type="radio" id="correct1" name="q1Answer"class="possible-answer" value="correct">
                 <label for="choice2">get with my friends</label>
 
-                <input type="radio" id="choice3" name="q1Answer" value="stay away from my friends">
+                <input type="radio" id="choice3" name="q1Answer" class="possible-answer" value="incorrect">
                 <label for="choice3">stay away from my friends</label>
 
-                <h5>2. Which Spice Girl left the group?</h5>
-                <input type="radio" id="choice1" name="q2Answer" value="Scary Spice">
+                <div class = "question"><h5>2. Which Spice Girl left the group?</h5></div>
+                <input type="radio" id="choice1" name="q2Answer" class="possible-answer" value="incorrect">
                 <label for="choice1">Scary Spice</label>
 
-                <input type="radio" id="choice2" name="q2Answer" value="Ginger Spice">
+                <input type="radio" id="correct2" name="q2Answer" class="possible-answer" value="correct">
                 <label for="choice2">Ginger Spice</label>
 
-                <input type="radio" id="choice3" name="q2Answer" value="Baby Spice">
+                <input type="radio" id="choice3" name="q2Answer" class="possible-answer" value="incorrect">
                 <label for="choice3">Baby Spice</label>
 
-                <h5>3. Which Spice Girl claimed she lip synced because she wasn't a good singer?</h5>
-                <input type="radio" id="choice1" name="q3Answer" value="Posh Spice">
+                <div class = "question"><h5>3. Which Spice Girl claimed she lip synced because she wasn't a good singer?</h5></div>
+                <input type="radio" id="correct3" name="q3Answer" class="possible-answer" value="correct">
                 <label for="choice1">Posh Spice</label>
 
-                <input type="radio" id="choice2" name="q3Answer" value="Sporty Spice">
+                <input type="radio" id="choice2" name="q3Answer" class="possible-answer" value="incorrect">
                 <label for="choice2">Sporty Spice</label>
 
-                <input type="radio" id="choice3" name="q3Answer" value="Scary Spice">
+                <input type="radio" id="choice3" name="q3Answer" class="possible-answer" value="incorrect">
                 <label for="choice3">Scary Spice</label>
 
-                <h5>4. What is Baby Spice's real name?</h5>
-                <input type="radio" id="choice1" name="q4Answer" value="Geri Halliwell">
+                <div class = "question"><h5>4. What is Baby Spice's real name?</h5></div>
+                <input type="radio" id="choice1" name="q4Answer" class="possible-answer" value="incorrect">
                 <label for="choice1">Geri Halliwell</label>
 
-                <input type="radio" id="choice2" name="q4Answer" value="Victoria Beckam">
+                <input type="radio" id="choice2" name="q4Answer" class="possible-answer" value="incorrect">
                 <label for="choice2">Victoria Beckam</label>
 
-                <input type="radio" id="choice3" name="q4Answer" value="Emma Bunton">
+                <input type="radio" id="correct4" name="q4Answer" class="possible-answer" value="correct">
                 <label for="choice3">Emma Bunton</label>
 
-                <h5>5. Which Spice Girl went on to be a successful fashion designer?</h5>
-                <input type="radio" id="choice1" name="q5Answer" value="Sporty Spice">
+                <div class = "question"><h5>5. Which Spice Girl went on to be a successful fashion designer?</h5></div>
+                <input type="radio" id="choice1" name="q5Answer" class="possible-answer" value="incorrect">
                 <label for="choice1">Sporty Spice</label>
 
-                <input type="radio" id="choice2" name="q5Answer" value="Posh Spice">
+                <input type="radio" id="correct5" name="q5Answer" class="possible-answer" value="correct">
                 <label for="choice2">Posh Spice</label>
 
-                <input type="radio" id="choice3" name="q5Answer" value="Ginger Spice">
+                <input type="radio" id="choice3" name="q5Answer" class="possible-answer" value="incorrect">
                 <label for="choice3">Ginger Spice</label>
 
-                <h5>6. What year did the Spice Girls break up?</h5>
-                <input type="radio" id="choice1" name="q6Answer" value="1999">
+                <div class = "question"><h5>6. What year did the Spice Girls break up?</h5></div>
+                <input type="radio" id="choice1" name="q6Answer" class="possible-answer" value="incorrect">
                 <label for="choice1">1999</label>
 
-                <input type="radio" id="choice2" name="q6Answer" value="2002">
+                <input type="radio" id="choice2" name="q6Answer" class="possible-answer" value="incorrect">
                 <label for="choice2">2002</label>
 
-                <input type="radio" id="choice3" name="q6Answer" value="2000">
+                <input type="radio" id="correct6" name="q6Answer" class="possible-answer" value="correct">
                 <label for="choice3">2000</label>
         </div>
 
@@ -103,9 +103,10 @@
         <h3 id="finished">Finished!</h3>
         <br>
 
-        <h8>Correct: <span id="correct">0</span></h8>
-        <h8>Incorrect: <span id="incorrect">0</span></h8>
-        <h8>Unanswered: <span id="unanswered">0</span></h8>
+        <h8><span id="correct-text"></span></h8>
+        <h8><span id="incorrect-text"></span></h8>
+        <!-- <h8><span id="unanswered-text"></span></h8> -->
+    </div>
     </div>
 
 
